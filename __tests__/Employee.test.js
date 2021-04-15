@@ -20,7 +20,13 @@ describe("Employee", () => {
       expect(actual).toBe(name);
     });
   });
-  // group for getId()
-  // group for getEmail()
-  // group for getRole()—returns 'Employee'
+ 
+  describe("getRole()", () => {
+    it("should return 'Employee'",() => {
+      const name = "Fakey Jakey";
+      const emp = new Employee(name, 1, "fake@email.com");
+      const actual = emp.getRole();
+      expect(actual).toBe("Employee");
+    })
+  })
 });
